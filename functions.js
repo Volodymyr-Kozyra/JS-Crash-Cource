@@ -34,3 +34,41 @@ console.log("total helth of the figther is: ", totHp2());
 
 
 vitality();
+
+// critical hit with random function
+
+function randomDamage1(min, max){
+    min = Math.ceil(fighter1.damage - 2);
+    max = Math.floor(fighter1.damage +2);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function crtHit (a, b){
+    a = Math.ceil(randomDamage1() * 2);
+    b = Math.floor(randomDamage1() * 3);
+    return Math.floor(Math.random() * (b - a) + a);
+}
+//console.log(randomDamage1());
+//console.log(crtHit());
+
+// crit chance
+
+function crtCh(a, b, z){
+    a = 10;
+    b = 100;
+    c = Math.round(Math.random() * (b - a) + a);
+    return c
+}
+
+if(crtCh()>70){
+    console.log("The fighter punched with a crit hit ", crtHit());
+} else if(crtCh()<30){
+    console.log("The hitted with a weak punch", wkHit());
+}else {
+    console.log("Fighter punched with a ordinary ", randomDamage1());
+}
+// weak punch
+function wkHit(){
+   let wkpunch = Math.round(randomDamage1() / 2);
+    return wkpunch;
+}

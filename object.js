@@ -18,18 +18,19 @@ if (fighter1.isHeDanger){
 }else {
     console.log("dont underisimate him");
 }
-    const fighter2 = {
-        name: 'Johny',
-        apHeight: 192,
-        apWeight: 110,
-        agility: 75,
-        hp: 100,
-        damage: 7,
-        isHeDanger: true,
-    hit: () => console.log ("miss a hit"),
-    }
-    console.log ("The fighters name is: ", fighter2.name);
-    console.log ("The main stats of the fighter are: ", fighter2.apHeight);
+const fighter2 = {
+   name: 'Johny',
+   apHeight: 192,
+   apWeight: 110,
+   agility: 75,
+   hp: 100,
+   damage: 7,
+   isHeDanger: true,
+   hit: () => console.log ("miss a hit"),
+}
+
+console.log ("The fighters name is: ", fighter2.name);
+console.log ("The main stats of the fighter are: ", fighter2.apHeight);
     if (fighter2.isHeDanger){ 
         console.log('You need to be carefull');
     }else {
