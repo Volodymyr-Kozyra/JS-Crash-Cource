@@ -8,11 +8,13 @@ const fighter1 = {
     hp: 110,
     damage: 9,
     isHeDanger: false,
+    health: vitality(),
     hit: () => console.log ("miss a hit"),
 }
+
 function vitality(){
 totalvit = fighter1.hp * 3;
-console.log("total helth of the figther is: ", totalvit);
+return totalvit;
 
 }
 
@@ -54,9 +56,9 @@ function crtHit (a, b){
 // crit chance
 
 function crtCh(a, b, z){
-    a = 10;
-    b = 100;
-    c = Math.round(Math.random() * (b - a) + a);
+    a = Math.ceil(10);
+    b = Math.floor(100);
+    c = Math.floor(Math.random() * (b - a) + a);
     return c
 }
 
